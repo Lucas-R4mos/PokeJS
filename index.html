@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/button-menu.css">
+    <link rel="stylesheet" href="/styles/sidenav.css">
     <link rel="icon" type="image/png" href="/images/pokeball_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>PokeJS</title>
 </head>
 <body>
-    <header id="page-header">
-        <h1 id="header-title">PokeJS</h1>
-        <img id="pokemon-logo" src="/images/1200px-International_Pokémon_logo.svg.webp" alt="Pokémon">
-    </header>
-    <main>
-        <div id="title-box">
-            BEM VINDO
-        </div>
-        <div class="page-content">
-            Este é um projeto de estudo de JavaScript.<br>
-            Após alcançar alguns marcos no <a href="http://tiny.cc/TestePokePython">PokePython</a> (<a href="https://github.com/Lucas-R4mos/Simulador-PokePython">GitHub</a>), decidi dar um tempo naquele projeto para aprender outras tecnologias.<br>
-            A ideia do programa é simular uma batalha Pokémon entre dois jogadores, oferecendo uma interface semelhante aos jogos clássicos do GameBoy.<br>
-            PS: A visualização em desktop ainda não está otimizada. :)<br>
-            PS2: Não há interesse econômico envolvido neste projeto.
-        </div>
-    </main>
-    <footer id="page-footer">
-        <p>GitHub: <a id="link-github" href="https://github.com/Lucas-R4mos">@Lucas-R4mos</a></p>
-        <p>2020</p>
-    </footer>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Novo Jogo</a>
+        <a href="#">Contato</a>
+        <div class=""></div>
+    </div>
+    <div id="main">
+        <header id="page-header">
+            <h1 id="header-title">PokeJS</h1>
+            <div class="button-menu" onclick="openNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </header>
+        <main>
+            <div id="title-box">
+                BEM VINDO
+            </div>
+            <div class="page-content">
+                Este é um projeto de estudo de JavaScript.<br>
+                Após alcançar alguns marcos no <a href="http://tiny.cc/TestePokePython">PokePython</a> (<a href="https://github.com/Lucas-R4mos/Simulador-PokePython">GitHub</a>), decidi dar um tempo naquele projeto para aprender outras tecnologias.<br>
+                A ideia do programa é simular uma batalha Pokémon entre dois jogadores, oferecendo uma interface semelhante aos jogos clássicos do GameBoy.                
+            </div>
+            <div class="page-content">
+                Logo que surgirem funcionalidades com jogabilidade eu irei postar o projeto no Heroku :)
+            </div>
+            <div class="page-content">
+                PS: A visualização em desktop ainda não está otimizada. Dê preferência para a visualisação em dispositivo móvel. :)<br>
+                PS2: Não há interesse econômico envolvido neste projeto.
+            </div>
+        </main>
+        <div id="filler"></div>
+        <footer id="page-footer">
+            <p>GitHub: <a id="link-github" href="https://github.com/Lucas-R4mos">@Lucas-R4mos</a></p>
+            <img id="pokemon-logo" src="/images/1200px-International_Pokémon_logo.svg.webp" alt="Pokémon">
+        </footer>
+    </div>
+    <script src="/scripts/sidenav.js"></script>
 </body>
 </html>

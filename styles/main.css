@@ -1,6 +1,8 @@
 :root {
     --color-red-pokeball: #fe3e31;
     --color-gray-pokeball: #575759;
+    --color-gray-darker-pokeball: #262627;
+    --color-gray-lighter-pokeball: #727274;
     font-size: 100%;
 }
 
@@ -8,11 +10,16 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    height: 100vh;
     background-color: black;
+    font-family: 'signika';
 }
 
 #page-header {
     background-color: var(--color-red-pokeball);
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 3rem;
     display: flex;
@@ -26,11 +33,6 @@ html, body {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.4rem;
     padding: 1rem;
-}
-
-#page-header #pokemon-logo {
-    width: 6rem;
-    padding-right: 1rem;
 }
 
 #title-box {
@@ -51,12 +53,16 @@ html, body {
     font: 400 1rem "signika";
 }
 
+#filler {
+    height: 2.5rem;
+}
+
 #page-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: var(--color-gray-pokeball);
-    width: 100vw;
+    width: 100%;
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -66,4 +72,9 @@ html, body {
 #page-footer p {
     margin: 1rem;
     font: 700 0.7rem "Press Start 2P";
+}
+
+#pokemon-logo {
+    width: 5rem;
+    padding-right: 1rem;
 }
