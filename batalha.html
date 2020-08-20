@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/batalha.css">
     <link rel="stylesheet" href="/styles/button-menu.css">
     <link rel="stylesheet" href="/styles/sidenav.css">
     <link rel="icon" type="image/png" href="/images/pokeball_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>PokeJS</title>
 </head>
-<body>
+<body onload="preLoad()">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/batalha.html">Novo Jogo</a>
+        <a href="/index.html">Home</a>
         <a href="/teste.html">Tela Teste</a>
     </div>
     <div id="main">
@@ -27,20 +28,22 @@
         </header>
         <main>
             <div id="title-box">
-                BEM VINDO
+                BATALHA
             </div>
-            <div class="page-content">
-                Este projeto foi criado para que eu possa aprender e aplicar JavaScript.<br>
-                Após alcançar alguns marcos no <a href="http://tiny.cc/TestePokePython">PokePython</a> (<a href="https://github.com/Lucas-R4mos/Simulador-PokePython">GitHub</a>), decidi dar um tempo naquele projeto para aprender outras tecnologias. Agora voltei para a ideia do mesmo jogo, porém utilizando interface criada com HTML/CSS e na linguagem JavaScript.<br>
-                Diferente do projeto anterior, desta vez pretendo usar uma API em vez de arquivos ".csv" para obter os dados sobre os Pokémons e sobre os golpes.
-            </div>
-            <div class="page-content">
-                A ideia do programa é simular uma batalha Pokémon entre dois jogadores, oferecendo uma interface semelhante aos jogos clássicos do GameBoy.
-            </div>
-            <div class="page-content">
-                Logo que surgirem funcionalidades com jogabilidade eu irei postar o projeto no Heroku :)<br>
-                PS: A visualização em desktop ainda não está otimizada. Dê preferência para a visualisação em dispositivo móvel. :)<br>
-                PS2: Não há interesse econômico envolvido neste projeto.
+            <div id="battle-container">
+                <div id="pokemon-selection" class="page-content">
+                    Player 1:<br>
+                    Escolha seu Pokémon.<br>
+                    <select name="poke-selection-player1" id="poke-selection-player1" required">
+                        <option disabled selected value>Escolha um Pokémon</option>
+                    </select><br><br>                    
+                    Player 2:<br>
+                    Escolha seu Pokémon.<br>
+                    <select name="poke-selection-player2" id="poke-selection-player2" required>
+                        <option disabled selected value>Escolha um Pokémon</option>
+                    </select><br><br>
+                    <button onclick="escolhePokemonsDepoisRenderiza()">Confirma</button>
+                </div>
             </div>
         </main>
         <div id="filler-footer"></div>
@@ -50,5 +53,6 @@
         </footer>
     </div>
     <script src="/scripts/interface/sidenav.js"></script>
+    <script src="scripts/pokemon.js"></script>
 </body>
 </html>

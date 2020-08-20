@@ -1,0 +1,76 @@
+#combat-call {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#button-start-combat {
+    height: 2rem;
+}
+
+#combat-screen {
+    margin: 0.6rem;
+    width: 90vw;
+    padding: 0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#visual-display {
+    margin: 0;
+    height: 15rem;
+    display: grid;
+    grid-template-areas: 
+    "enemy-info enemy-image"
+    "player-image player-info";
+}
+
+.visual-display-item {
+    padding: 0.8rem;
+}
+
+#enemy-image {
+    height: 6rem;
+}
+
+#player-image {
+    height: 6rem;
+}
+
+
+#options-display {
+    margin: 0;
+    height: 4.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "battle-question battle-choice";
+}
+
+#battle-question {
+    background-color: var(--color-blue-combat-screen);
+    color: white;
+    width: 120%;
+    border: solid 8px var(--color-yellow-border-combat-screen);
+    border-radius: 0 0 0 10px;
+    padding: 0.4rem;
+    font: 400 1rem;
+}
+
+#battle-choice {
+    display: grid;
+    grid-template-areas:
+    "fight-button bag-button"
+    "pokemon-button run-button";
+    border: solid 5px var(--color-gray-border-combat-screen);
+    border-radius: 0 0 10px 0;
+    width: calc(100% - 2rem);
+    margin-left: 1.4rem;
+}
+
+.battle-choice-button {
+    background-color: white;
+    border: none;
+    width: 3rem;
+    font: 400 1rem "signika";
+}

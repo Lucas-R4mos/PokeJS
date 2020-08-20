@@ -3,6 +3,9 @@
     --color-gray-pokeball: #575759;
     --color-gray-darker-pokeball: #262627;
     --color-gray-lighter-pokeball: #727274;
+    --color-blue-combat-screen: #254a67;
+    --color-yellow-border-combat-screen: #c8a848;
+    --color-gray-border-combat-screen: #706880;
     font-size: 100%;
 }
 
@@ -15,6 +18,11 @@ html, body {
     font-family: 'signika';
 }
 
+#main {
+    display: block;
+    align-items: center;
+}
+
 #page-header {
     background-color: var(--color-red-pokeball);
     position: sticky;
@@ -25,7 +33,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-height: 6rem;
 }
 
 #header-title {
@@ -63,7 +70,7 @@ html, body {
     left: 0;
     background-color: var(--color-gray-pokeball);
     width: 100%;
-    height: 2.5rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
