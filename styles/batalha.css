@@ -10,7 +10,6 @@
 
 #combat-screen {
     margin: 0.6rem;
-    width: 90vw;
     padding: 0;
     border-radius: 10px;
     background-color: white;
@@ -40,37 +39,101 @@
 
 #options-display {
     margin: 0;
-    height: 4.5rem;
+    height: 5.2rem;
     width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "battle-question battle-choice";
+    display: flex;
 }
 
-#battle-question {
+.battle-message {
     background-color: var(--color-blue-combat-screen);
     color: white;
     width: 120%;
-    border: solid 8px var(--color-yellow-border-combat-screen);
+    padding: 0;
+    border-left: solid 8px var(--color-yellow-border-combat-screen);
+    border-top: solid 8px var(--color-yellow-border-combat-screen);
+    border-bottom: solid 8px var(--color-yellow-border-combat-screen);
     border-radius: 0 0 0 10px;
-    padding: 0.4rem;
     font: 400 1rem;
 }
+
+#battle-message-report {
+    border: solid 8px var(--color-yellow-border-combat-screen);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.white-border {
+    border: solid 0.2rem white;
+    border-radius: 2px;
+    height: 93%;
+    margin-top: -0.1rem;
+}
+
+
+#report-button-container {
+    width: 100%;
+}
+
+.report-button {
+    height: 100%;
+    width: 100%;
+}
+
+.white-border p {
+    margin: 0.5rem;
+}
+
 
 #battle-choice {
     display: grid;
     grid-template-areas:
-    "fight-button bag-button"
-    "pokemon-button run-button";
+    "fight-button"
+    "run-button";
     border: solid 5px var(--color-gray-border-combat-screen);
     border-radius: 0 0 10px 0;
-    width: calc(100% - 2rem);
-    margin-left: 1.4rem;
+    width: 6rem;
+}
+
+#battle-choice-report {
+    border: solid 5px var(--color-gray-border-combat-screen);
+    border-radius: 0 0 10px 0;
+    width: 6rem;
+    display: flex;
+    align-items: center;
 }
 
 .battle-choice-button {
     background-color: white;
     border: none;
-    width: 3rem;
+    height: 100%;
     font: 400 1rem "signika";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#battle-choice-moves {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: solid 5px var(--color-gray-border-combat-screen);
+    border-radius: 0 0 0 10px;
+    width: calc(100% - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#move-selection-player1, #move-selection-player2 {
+    height: 3rem;
+    width: 8rem;
+}
+
+
+#battle-choice-confirm-container {
+    display: flex;
+    border: solid 5px var(--color-gray-border-combat-screen);
+    border-radius: 0 0 10px 0;
+    width: 4.5rem;
 }
